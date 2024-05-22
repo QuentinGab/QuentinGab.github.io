@@ -587,12 +587,8 @@ video {
   margin-right: 0.25rem;
 }
 
-.ml-container {
-  margin-left: calc((100% - 768px) / 2);
-}
-
-.mr-container {
-  margin-right: calc((100% - 768px) / 2);
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -613,24 +609,20 @@ video {
   height: 1.25rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-96 {
   height: 24rem;
 }
 
-.max-h-96 {
-  max-height: 24rem;
+.h-full {
+  height: 100%;
 }
 
 .w-auto {
   width: auto;
 }
 
-.max-w-3xl {
-  max-width: 48rem;
+.max-w-none {
+  max-width: none;
 }
 
 .max-w-screen-md {
@@ -658,6 +650,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-2 {
@@ -735,8 +731,12 @@ video {
   padding-left: 0.5rem;
 }
 
-.pl-2\.5 {
-  padding-left: 0.625rem;
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
 }
 
 .pr-2 {
@@ -759,10 +759,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.leading-7 {
-  line-height: 1.75rem;
 }
 
 .text-blue-500 {
@@ -797,24 +793,48 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+html {
+  font-family: "Red Hat Display", "Manrope", "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+[x-cloak] {
+  display: none;
+}
+
+.hover\:bg-gray-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:mt-20 {
     margin-top: 5rem;
   }
+
+  .md\:pl-0 {
+    padding-left: 0px;
+  }
 }
 
-.\[\&\:first-child\]\:ml-container:first-child {
-  margin-left: calc((100% - 768px) / 2);
+.\[\&\>\*\:first-child\]\:ml-2>*:first-child {
+  margin-left: 0.5rem;
 }
 
-.\[\&\>\$\:first-child\]\:ml-container>$:first-child {
-  margin-left: calc((100% - 768px) / 2);
+@media (min-width: 768px) {
+  .md\:\[\&\>\*\:first-child\]\:ml-container>*:first-child {
+    margin-left: calc((100% - 768px) / 2);
+  }
 }
 
-.\[\&\>\*\:first-child\]\:ml-container>*:first-child {
-  margin-left: calc((100% - 768px) / 2);
+.\[\&\>\*\:last-child\]\:mr-2>*:last-child {
+  margin-right: 0.5rem;
 }
 
-.\[\&\>\*\:last-child\]\:mr-container>*:last-child {
-  margin-right: calc((100% - 768px) / 2);
+@media (min-width: 768px) {
+  .md\:\[\&\>\*\:last-child\]\:mr-container>*:last-child {
+    margin-right: calc((100% - 768px) / 2);
+  }
 }

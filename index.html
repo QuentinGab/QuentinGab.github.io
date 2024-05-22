@@ -24,7 +24,11 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Quentin Gabriele - Design Engineer" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="./src/style-production.css" rel="stylesheet" />
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
@@ -42,7 +46,7 @@
       <p class="mb-3">
         I'm
         <span
-          class="bg-white pl-2.5 pr-2 py-0.5 shadow rounded-l-[1rem] rounded-r-lg inline-flex items-center gap-2 leading-7"
+          class="bg-white pl-2 pr-2 py-0.5 shadow rounded-l-[1rem] rounded-r-lg inline-flex items-center gap-2 text-base"
         >
           <span class="relative inline-flex">
             <span
@@ -56,7 +60,7 @@
         </span>
         by the way. Email me at
         <button
-          class="bg-white px-2 py-0.5 shadow rounded-lg mr-1 inline-flex items-center gap-2 leading-7"
+          class="bg-white pl-2 pr-1 py-0.5 shadow rounded-lg mr-1 inline-flex items-center gap-1 hover:bg-gray-50 text-base""
           type="button"
           x-on:click="copy"
           x-data="{
@@ -99,7 +103,7 @@
       </p>
 
       <p class="mb-1">My skills include:</p>
-      <ul class="list-disc mb-3">
+      <ul class="list-disc mb-3 pl-4 md:pl-0">
         <li>Backend: Laravel</li>
         <li>
           Frontend: Livewire, Javascript/Typescript, AlpineJs, ReactJs, VueJs
@@ -107,9 +111,12 @@
         <li>Design: Figma, Framer, Webflow</li>
       </ul>
 
-      <p class="mb-3">Here is some of my latest work:</p>
+      <p class="mb-3">Here are some of my latest works:</p>
 
-      <h2 class="font-semibold">As a design engineer and co-founder</h2>
+      <div>
+        <h2 class="font-semibold inline">As a design engineer and co-founder</h2>
+        <span> ⋅ 4 years</span>
+      </div>
       <p class="text-base">
         <a class="text-blue-500" href="https://youdji.com" target="_blank"
           >https://youdji.com</a
@@ -121,43 +128,46 @@
     </div>
 
     <div
-      class="flex gap-2 overflow-auto items-start py-5 h-96 [&>*:first-child]:ml-container [&>*:last-child]:mr-container"
+      class="flex gap-2 overflow-auto items-start py-5 h-96 [&>*:first-child]:ml-2 [&>*:last-child]:mr-2 md:[&>*:first-child]:ml-container md:[&>*:last-child]:mr-container"
     >
       <img
         src="images/youdji/youdji-dashboard.webp"
         alt="Youdji Home"
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       />
       <video
         src="images/youdji/youdji-congrats.mp4"
         loop
         muted
         autoplay
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       ></video>
       <img
         src="images/youdji/youdji-chat.webp"
         alt="Youdji Chat"
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       />
       <img
         src="images/youdji/youdji-orders.webp"
         alt="Youdji Orders"
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       />
       <img
         src="images/youdji/youdji-profile.webp"
         alt="Youdji Profile"
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       />
       <img
         src="images/youdji/youdji-search.webp"
         alt="Youdji Search"
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       />
     </div>
     <div class="max-w-screen-md mx-auto px-4 pt-4">
-      <h2 class="font-semibold">As a Frontend Lead in a 15+ team</h2>
+      <div>
+        <h2 class="font-semibold inline">As a Frontend Lead in a 15+ team</h2>
+        <span> ⋅ 2 years</span>
+      </div>
       <p class="text-base">
         <a class="text-blue-500" href="https://www.oneflex.fr/" target="_blank"
           >https://www.oneflex.fr</a
@@ -167,12 +177,15 @@
         React, GraphQL, MUI, Typescript, NodeJS, leaflet
       </p>
     </div>
-    <div
-      class="flex gap-2 overflow-auto items-start py-5 h-96 [&>*:first-child]:ml-container [&>*:last-child]:mr-container"
-    ></div>
 
     <div class="max-w-screen-md mx-auto px-4 pt-4">
-      <h2 class="font-semibold">As a No-code freelance</h2>
+      <div class="">
+        <h2 class="font-semibold inline">
+          As a No-code freelance
+        </h2>
+        <span> ⋅ 1 project</span>
+      </div>
+      
       <p class="text-base">
         <a
           class="text-blue-500"
@@ -182,24 +195,24 @@
         >
       </p>
       <p class="text-base text-gray-500">Webflow</p>
-    </div>
+      </div>
     <div
-      class="flex gap-2 overflow-auto items-start py-5 h-96 [&>*:first-child]:ml-container [&>*:last-child]:mr-container"
+      class="flex gap-2 overflow-auto items-start py-5 h-96 [&>*:first-child]:ml-2 [&>*:last-child]:mr-2 md:[&>*:first-child]:ml-container md:[&>*:last-child]:mr-container"
     >
       <img
         src="images/barredescevennes/tourisme.webp"
         alt="Barre des cévennes website"
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       />
       <img
         src="images/barredescevennes/remarquable.webp"
         alt="Barre des cévennes website"
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       />
       <img
         src="images/barredescevennes/histoire.webp"
         alt="Barre des cévennes website"
-        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto"
+        class="rounded-lg shadow-lg shadow-gray-300 h-full w-auto max-w-none"
       />
     </div>
   </body>
